@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+
+
+    function calculate_prefix_sum(arr) {
+        let b=[];
+        let j=0;
+        let sum=0;
+        for (let i = 0; i <arr.length ; i++) {
+            sum=0;
+            j=0;
+            while(j<=i){
+                sum+=arr[j];
+                j++;
+            }
+            b[i]=sum;
+        }
+        return b;
+    }
+    let a=[];
+    let n=+prompt("Độ dài mảng a:");
+    for (let i = 0; i <n ; i++) {
+        a[i]=+prompt("Nhập giá trị thứ "+i+":");
+    }
+    let result=calculate_prefix_sum(a);
+    document.write("Tổng các tiền tố trong mảng :"+result);
+
+</script>
+</html>
