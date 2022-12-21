@@ -7,7 +7,28 @@
 <body>
 </body>
 <script>
-    let B=[7,2,5,4,6,3,5,3];
-    let A=[7,2,5,3,5,3];
+    function missingValue(A,B){
+        let C=[];
+            for (let j = 0; j <B.length ; j++) {
+                if(!A.includes(B[j])){
+                    C.push(B[j]);
+                }
+            }
+            return C;
+    }
+    let n=+prompt("Chiều dài Mảng  A:");
+   let A=[];
+    for (let i = 0; i <n ; i++) {
+        A[i]=+prompt("Enter Number "+i);
+    }
+    let m=+prompt("Chiều dài mảng  B:");
+    let B=[];
+    for (let i = 0; i <n ; i++) {
+        B[i]=+prompt("Enter Number "+i);
+    }
+    document.write("Array A:"+A+"<br>");
+    document.write("Array B:"+B+"<br>");
+    let result=missingValue(A,B);
+    document.write("Phần tử có trong B nhưng không có trong A:"+result);
 </script>
 </html>
