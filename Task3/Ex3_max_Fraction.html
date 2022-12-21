@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function MaxFraction(a,b) {
+        let index=0;
+        let max=0;
+        let temp=0;
+        let temp1;
+        let c;
+        if(!a.includes(b)) {
+            for (let i = 0; i < a.length; i++) {
+                c=a[i]/b[i];
+                if(max<c){
+                    temp=a[i];
+                    temp1=b[i];
+                    index=i;
+                }
+            }
+            document.write(temp+"/"+temp1+" là phân số lớn nhất có chỉ số là "+index);
+        }
+    }
+    let n=+prompt("Nhập chiều dài :")
+    let numerators = [];
+    let denominators = [];
+    for (let i = 0; i <n ; i++) {
+        numerators[i]= +prompt("Nhập giá trị của tử số :");
+    }
+    for (let i = 0; i <n ; i++) {
+        denominators[i] = +prompt("Nhập giá trị mẫu số:");
+    }
+    MaxFraction(numerators,denominators);
+</script>
+</body>
+</html>
