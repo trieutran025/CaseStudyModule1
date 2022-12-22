@@ -55,5 +55,5 @@ function OrderDrink6() {
 function calculate() {
     let Money=OrderDrink1()+OrderDrink2()+OrderDrink3()+OrderDrink4()+OrderDrink5()+OrderDrink6();
     document.getElementById("READ").innerText="Số tiền cần phải thanh toán là:"+Money;
-   
+
 }
