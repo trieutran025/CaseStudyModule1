@@ -11,11 +11,9 @@
             if(i===0){
                 document.write(arr[i].toUpperCase());
             }
-            else if(arr[i]===arr[i+1]){
-                if(arr[i]===" "){
+            else if(arr[i]===arr[i+1]&&arr[i]===" "){
                     document.write(arr[i+2].toUpperCase());
                     i+=2;
-                }
             }
             else if(arr[i]===" ") {
                 document.write(arr[i]);
@@ -31,11 +29,22 @@
             }
         }
     }
-
+    function ViewLengthStr(str){
+        let world=str.split(' ');
+        let maxLength=0;
+        for (let i = 0; i <world.length ; i++) {
+            if(world[i].length>maxLength){
+                maxLength=world[i].length;
+            }
+        }
+        return maxLength;
+    }
     let arr=prompt("Nhập chuỗi");
     document.write("Trước khi Chuẩn hóa :"+arr+"<br>");
     document.write("Sau khi Chuẩn hóa :");
-    WriteStandard(arr);
+    WriteStandard(arr+"<br>");
+    let result=ViewLengthStr(arr);
+    document.write("Từ dài nhất trong chuỗi là :"+result+"<br>");
 </script>
 </body>
 </html>
