@@ -9,18 +9,20 @@
     function differentSymbolsNaive(s){
         let count=1;
         let a=s[0];
+        let s2=[];
+        s2.push(s[0]);
         for (let i = 0; i <s.length ; i++) {
             if(a!==s[i]&&s[i]!==" "){
                 count++;
+                s2.push(s[i]);
             }
-
         }
         if(count===1)count=0;
-        return count;
+        document.write(s2+"<br>")
+        document.write(count);
     }
     let str=prompt("Nhập xâu kí tự ");
-    let result=differentSymbolsNaive(str);
-    document.write(result);
+    differentSymbolsNaive(str);
 </script>
 </body>
 </html>

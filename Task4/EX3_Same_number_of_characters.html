@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function characterCount(textA,textB) {
+        const arrA = textA.split("");
+        const arrB = textB.split("");
+        let obj ={};
+        for (let i = 0; i < arrB.length; i++) {
+            const index = arrA.indexOf(arrB[i]);
+            if (index >= 0) {
+                if (obj[arrB[i]]) {
+                    obj[arrB[i]] +=1;
+                } else {
+                    obj[arrB[i]] = 1;
+                }
+                arrA.splice(index, 1);
+            }
+        }
+        console.log(JSON.stringify(obj));
+        let str = "";
+        let sum=0;
+        for (let k of Object.keys(obj)) {
+            str += "ki tu " + k + "=" + obj[k];
+            sum+=obj[k];
+        }
+        document.write(sum+"<br>");
+        document.write(str);
+    }
+    let s1 = prompt("Nhập chuỗi thứ nhất");
+    let s2 = prompt("Nhập chuỗi thứ hai");
+    characterCount(s1,s2);
+</script>
+</body>
+</html>
