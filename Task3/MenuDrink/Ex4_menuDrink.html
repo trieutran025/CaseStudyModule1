@@ -11,14 +11,14 @@
         <div style="border: 1px;">
         <h3>Menu Nước</h3>
             <span>
-        <input type="checkbox" name="drink" id="drink1" onclick="OrderDrink1()"><label for="drink1">Cafe</label>
+        <input type="checkbox"  name="drink" id="drink1" onclick="OrderDrink1()"><label for="drink1">Cafe</label>
             <input type="number"id="input1"min="0"style="width: 30px">
                 <p id="read1"></p>
                 </span>
             <span>
         <input type="checkbox" name="drink" id="drink2" onclick="OrderDrink2()"><label for="drink2">Cam vắt</label>
             <input type="number"id="input2"min="0"style="width: 30px">
-                <p id="read2"></p>
+                <p id="read2"onchange="OrderDrink2()"></p>
                 </span>
             <span>
         <input type="checkbox" name="drink" id="drink3" onclick="OrderDrink3()"><label for="drink3">Nước ép cà rốt</label>

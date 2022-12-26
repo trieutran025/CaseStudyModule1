@@ -1,0 +1,29 @@
+
+#heading {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+.vl {
+    border-left: 3px solid black;
+    height: 600px;
+    position: absolute;
+    left: 30%;
+    margin-left: -100px;
+    top: 110px;
+}
+#tieuDe {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hinhanh {
+    height: 100px;
+    display: flex;
+}
+
+#2 {
+    width: 30%;
+    border-right: solid 1px;
+}
