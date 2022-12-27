@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            padding: 20px;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="Students.js"></script>
 </head>
 <body>
-<table>
-    <tr>
-
-    </tr>
-</table>
+    <button type="button"onclick="createStudent()">Thêm mới học viên</button>
+    <button type="button"onclick="SetStudent()">Sủa thông tin học viên</button>
+    <button type="button"onclick="deleteStudent()">Xóa Học viên</button>
+    <br><br>
+    <span id="result"></span>
 </body>
 </html>
