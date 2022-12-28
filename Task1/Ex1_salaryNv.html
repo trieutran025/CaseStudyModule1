@@ -7,37 +7,22 @@
     <link rel="stylesheet" href="../Task7/thietke.css">
 </head>
 <body>
-<div id="1">
-    <h1 id="tieude">Hệ thống quản lý bài tập Casestudy module 1</h1>
-    <img id="hinhanh"src="https://cdn-icons-png.flaticon.com/512/104/104093.png">
-    <hr>
-</div>
-<div id="2">
-    <label>
-        <select>
-            <option>Bài tập 1</option>
-        </select>
-    </label>
-    <br><br><br>
-    <label>
-        <select>
-            <option>Bài tập 2</option>
-        </select>
-
-    </label>
-    <br><br><br>
-    <label>
-        <select>
-            <option>Bài tập 3</option>
-        </select>
-    </label>
-    <br><br><br>
-    <label>
-        <select>
-            <option>Bài tập 4</option>
-        </select>
-    </label>
-    <br><br><br>
-</div>
+function calculateSalary(salary) {
+        let incomeTax;
+        if(salary===15000000){
+            incomeTax=(20/100);
+        }
+        else if(7000000<salary&&salary<15000000){
+            incomeTax=(10/100)
+        }
+        else{
+            incomeTax=(5/100);
+        }
+        let moneySalary=salary-salary*incomeTax;
+        return moneySalary;
+    }
+    let salary=+prompt("Nhập lương nhân viên:");
+    let result=calculateSalary(salary);
+    document.write("Số lương phải nhận được là:"+result+"<br>");
 </body>
 </html>
