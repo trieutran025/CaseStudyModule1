@@ -10,15 +10,10 @@
     let h=+prompt("Nhập chiều cao vào đây:");
     for (let i = 1; i <=h ; i++) {
         for (let j = 1; j <=i ; j++) {
-            if(i===1||i===h){
-                document.write("*");
-            }else{
-                if(j===1||j===i){
-                    document.write("*");
-                }
-                else{
-                    document.write("&ensp;");
-                }
+            if(i===1||i===h) document.write("*");
+            else{
+                if(j===1||j===i) document.write("*");
+                else document.write("&ensp;");
             }
         }
         document.write("<br>");
