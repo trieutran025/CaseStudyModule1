@@ -131,7 +131,7 @@ function createStudent()
     updateStudents();
     return students;
 }
-function SetStudent()
+function EditingStudent()
 {
     let wanted = +prompt ("Nhập mã học viên cần sửa thông tin");
     for (let i = 0; i < students.length; i++)
@@ -142,8 +142,7 @@ function SetStudent()
             do
             {
                 wantedName = prompt ("Nhập lại họ và tên học viên");
-            }
-            while (checkName(wantedName));
+            } while (checkName(wantedName));
             students[i].setName(wantedName);
             if(confirm("Bạn có muốn Nhập lại lớp Không")) {
                 let wantedGrade = prompt("Nhập lại lớp học viên");
